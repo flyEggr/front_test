@@ -1,13 +1,15 @@
-import AdminSidebar from "@/common/AdminSidebar"
+import AdminSidebar from "../common/AdminSidebar"
 import { Box } from "@mui/material"
 import { Outlet } from "react-router-dom"
 
-const AdminPage = ()=>{
-   <Box sx={{ display: "flex", height: "100vh" }}>
-    <AdminSidebar />
-    <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: "#f3f4f6", overflow: "auto" }}>
-      <Outlet />
+const AdminPage = () => {
+  return (
+    <Box sx={{ display: "flex", height: "100vh" }}>
+      <AdminSidebar />
+      <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: "#f3f4f6", overflow: "auto" }}>
+        <Outlet />
+      </Box>
     </Box>
-  </Box>
+  )
 }
 export default AdminPage
